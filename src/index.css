@@ -5,9 +5,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --main-dark: #20262b;
+  --main-dark-sub: #21272c;
+  --main-white: #ffffff;
+  --main-gold: #e7b750;
+  --main-gray: #ccc;
+  --text-title: 2.5em;
+  --text-title-sub: 1.5em;
+
+  --H-Main-Navbar: 80px;
+  --H-Main-Content: calc(100vh - 80px);
+  
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+body, html{
+  height: 100vh;
+  width: 100%;
+} */
+
+#root{
+  height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-dark);
+}
+
+img{ display: block; }

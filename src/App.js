@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import RouterInvited from "./navigation/RouterInvited";
+
+import { CarGlobalProvider } from "./context/contextCar/CarGlobalState";
+
+const MainContent = () => {
+  return (
+    <div style={{ height: "var(--H-Main-Content)" }}>
+      <RouterInvited />
+    </div>
+  );
+};
+
+const LaChacra = () => {
+  return (
+    <>
+      <Navbar />
+      <MainContent />
+    </>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CarGlobalProvider>
+      <BrowserRouter>
+        <LaChacra />
+      </BrowserRouter>
+    </CarGlobalProvider>
   );
 }
 
