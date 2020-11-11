@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export const ButtonSquareContainer =  styled(motion.div)`
     width: 110px;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex } from "./../../layout/Flex";
+// import { Flex } from "./../../layout/Flex";
 import * as style from "./Home.style";
 
 import CardHome from "./../../components/cardHome/CardHome";

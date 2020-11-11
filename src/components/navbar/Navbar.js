@@ -3,11 +3,11 @@ import * as style from "./Navbar.style";
 import { Flex } from './../../layout/Flex'
 //import { StyledLink } from './../../layout/Typography'
 
-import { CarGlobalContext } from './../../context/contextCar/CarGlobalState'
+import { CartGlobalContext } from './../../context/contextCart/CartGlobalState'
 
 export default function Navbar() {
 
-  const { menus } = useContext(CarGlobalContext)
+  const { cart } = useContext(CartGlobalContext)
 
   return (
     <style.Navbar>
@@ -20,7 +20,7 @@ export default function Navbar() {
         <style.NavbarLink to="/">Reservas</style.NavbarLink>
         <style.NavbarLink to="/">Estadisticas</style.NavbarLink>
         <style.NavbarLink to="/">Contacto</style.NavbarLink>
-        <style.NavbarLink to="/cart">Carrito { menus.length } </style.NavbarLink>
+        <style.NavbarLink to="/cart">Carrito { cart.menus.length } </style.NavbarLink>
         <style.NavbarLink to="/">Inciar Seción</style.NavbarLink>
 
       </Flex>

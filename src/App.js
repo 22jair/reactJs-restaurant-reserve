@@ -3,7 +3,8 @@ import { BrowserRouter } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import RouterInvited from "./navigation/RouterInvited";
 
-import { CarGlobalProvider } from "./context/contextCar/CarGlobalState";
+import { CartGlobalProvider } from "./context/contextCart/CartGlobalState";
+import { UserGlobalProvider } from "./context/contextUser/UserGlobalState";
 
 const MainContent = () => {
   return (
@@ -24,11 +25,13 @@ const LaChacra = () => {
 
 function App() {
   return (
-    <CarGlobalProvider>
-      <BrowserRouter>
-        <LaChacra />
-      </BrowserRouter>
-    </CarGlobalProvider>
+    <UserGlobalProvider>
+      <CartGlobalProvider>
+        <BrowserRouter>
+          <LaChacra />
+        </BrowserRouter>
+      </CartGlobalProvider>
+    </UserGlobalProvider>
   );
 }
 
